@@ -1,56 +1,60 @@
 fileFormatVersion: 2
-guid: 8e4ac8b767b0872449203eb5c0ec85fa
+guid: c4225827ebcee694280b510bdea00ca9
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: coluna-interior
-    100002: coluna-interior_002
-    100004: coluna-interior_003
-    100006: coluna-interior_004
-    100008: coluna-interior_005
-    100010: coluna-interior_006
-    100012: coluna-interior_007
-    100014: coluna-interior_008
-    100016: coluna-interior_009
-    100018: coluna-interior_010
-    100020: coluna-interior_011
-    100022: coluna-interior_012
-    100024: Cube
-    100026: Cube_001
-    100028: Cube_002
-    100030: Cube_003
-    100032: //RootNode
-    100034: parede-interior
-    100036: parede-interior_001
-    100038: parede-interior_002
-    100040: parede-interior_003
-    100042: piso2
-    100044: piso3
-    100046: tubo
-    400000: coluna-interior
-    400002: coluna-interior_002
-    400004: coluna-interior_003
-    400006: coluna-interior_004
-    400008: coluna-interior_005
-    400010: coluna-interior_006
-    400012: coluna-interior_007
-    400014: coluna-interior_008
-    400016: coluna-interior_009
-    400018: coluna-interior_010
-    400020: coluna-interior_011
-    400022: coluna-interior_012
-    400024: Cube
-    400026: Cube_001
-    400028: Cube_002
-    400030: Cube_003
-    400032: //RootNode
-    400034: parede-interior
-    400036: parede-interior_001
-    400038: parede-interior_002
-    400040: parede-interior_003
-    400042: piso2
-    400044: piso3
-    400046: tubo
+    100000: Camera
+    100002: coluna-interior
+    100004: coluna-interior_002
+    100006: coluna-interior_003
+    100008: coluna-interior_004
+    100010: coluna-interior_005
+    100012: coluna-interior_006
+    100014: coluna-interior_007
+    100016: coluna-interior_008
+    100018: coluna-interior_009
+    100020: coluna-interior_010
+    100022: coluna-interior_011
+    100024: coluna-interior_012
+    100026: Cube
+    100028: Cube_001
+    100030: Cube_002
+    100032: Cube_003
+    100034: //RootNode
+    100036: Lamp
+    100038: parede-interior
+    100040: parede-interior_001
+    100042: parede-interior_002
+    100044: parede-interior_003
+    100046: piso2
+    100048: piso3
+    100050: tubo
+    400000: Camera
+    400002: coluna-interior
+    400004: coluna-interior_002
+    400006: coluna-interior_003
+    400008: coluna-interior_004
+    400010: coluna-interior_005
+    400012: coluna-interior_006
+    400014: coluna-interior_007
+    400016: coluna-interior_008
+    400018: coluna-interior_009
+    400020: coluna-interior_010
+    400022: coluna-interior_011
+    400024: coluna-interior_012
+    400026: Cube
+    400028: Cube_001
+    400030: Cube_002
+    400032: Cube_003
+    400034: //RootNode
+    400036: Lamp
+    400038: parede-interior
+    400040: parede-interior_001
+    400042: parede-interior_002
+    400044: parede-interior_003
+    400046: piso2
+    400048: piso3
+    400050: tubo
     2300000: coluna-interior
     2300002: coluna-interior_002
     2300004: coluna-interior_003
@@ -120,7 +124,6 @@ ModelImporter:
     4300040: parede-interior_003
     4300042: parede-interior_001
     4300044: piso2
-    7400000: Default Take
     9500000: //RootNode
   materials:
     importMaterials: 1
