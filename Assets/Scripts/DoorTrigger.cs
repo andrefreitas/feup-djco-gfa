@@ -9,6 +9,7 @@ public class DoorTrigger : MonoBehaviour {
 	public long cycles = 0;
 	private bool pressed = false;
 	public float angularVel = 0.5f;
+	public float incYButton = 0.001f;
 
 	// Use this for initialization
 	void Start () {
@@ -27,13 +28,33 @@ public class DoorTrigger : MonoBehaviour {
 				cycles++;
 			}
 
-			else pressed = false;
+			else {
+				SetSwitchOff();
+			}
 		}
 	
 	}
 
 	void OnTriggerEnter(Collider other) {
 		cycles = 0;
-		pressed = true;
+		SetSwitchOn();
+	}
+
+	void SetSwitchOn() {
+		if (!pressed) {
+			for (int i = 0; i < 100; i++) {
+					doorSwitch.transform.Translate (Vector3.down * incYButton);
+			}
+
+			pressed = true;
+		}
+	}
+
+	void SetSwitchOff() {
+		for (int i = 0; i < 100; i++) {
+			doorSwitch.transform.Translate(Vector3.up*incYButton);
+		}
+
+		pressed = false;
 	}
 }
