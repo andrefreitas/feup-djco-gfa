@@ -4,7 +4,7 @@ using System.Collections;
 public class ElevatorKey : MonoBehaviour {
 
 	public float angSpeed = 1f;
-	public bool active = true;
+	public GameObject elevatorDoor;
 
 	// Use this for initialization
 	void Start () {
@@ -13,12 +13,12 @@ public class ElevatorKey : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(active)
-			gameObject.transform.Rotate (Vector3.up);
+		gameObject.transform.Rotate (Vector3.up);
 	}
 
 	void OnTriggerEnter(Collider col) {
 		Debug.Log ("COLLIDED");
 		Destroy (gameObject);
+		Destroy (elevatorDoor);
 	}
 }
