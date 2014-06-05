@@ -24,7 +24,6 @@ public class DoorTrigger : MonoBehaviour {
 			door.transform.Rotate(Vector3.up * (-angularVel));
 
 			if(cycles < maxCycles) {
-				Debug.Log(cycles);
 				cycles++;
 			}
 
@@ -35,7 +34,7 @@ public class DoorTrigger : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerEnter(Collider col) {
 		cycles = 0;
 		SetSwitchOn();
 	}
