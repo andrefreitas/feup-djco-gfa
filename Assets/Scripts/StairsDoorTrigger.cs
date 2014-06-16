@@ -8,6 +8,8 @@ public class StairsDoorTrigger : MonoBehaviour {
 	private bool nearDoor = false;
 	private long timeElapsed = 0;
 	private long limitTime = 300;
+	private bool rotatingDoor = false;
+	private long cyclesDoor = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +19,8 @@ public class StairsDoorTrigger : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey ("k") && hasKey && nearDoor) {
-			Destroy (stairsDoor);
+			//Destroy (stairsDoor);
+			rotatingDoor = true;
 			hasKey = false;
 		}
 
@@ -27,6 +30,14 @@ public class StairsDoorTrigger : MonoBehaviour {
 			if(timeElapsed >= limitTime) {
 				nearDoor = false;
 				timeElapsed = 0;
+			}
+		}
+
+		if (rotatingDoor) {
+			cyclesDoor++;
+			stairsDoor.transform.Rotate(Vector3.up * 1f);
+			if(cyclesDoor >= 85) {
+				rotatingDoor = false;
 			}
 		}
 	}
