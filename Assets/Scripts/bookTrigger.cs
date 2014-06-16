@@ -17,13 +17,12 @@ public class bookTrigger : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		Debug.Log ("Book found: " + bookTrigger.bookFound);
 		bookText = GameObject.Find ("bookText");
-		if (!bookTrigger.bookFound) {
+		if (!bookFound) {
 			bookText.guiText.enabled = true;
 		} else {
 			bookText.guiText.enabled = true;
 			bookText.guiText.text = "Encontraste!";
 		}
-		Destroy (gameObject);
 	}
 
 }
