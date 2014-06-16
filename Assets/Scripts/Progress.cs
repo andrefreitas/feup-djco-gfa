@@ -34,4 +34,8 @@ public class Progress : MonoBehaviour {
 		percentageCompleted = percentage;
 	}
 
+	public static void IncreasePercentage(float percentage) {
+		percentageCompleted += percentage;
+	}
+
 }

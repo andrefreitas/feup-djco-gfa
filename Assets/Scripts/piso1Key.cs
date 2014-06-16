@@ -17,6 +17,7 @@ public class piso1Key : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		Debug.Log ("Found the key!");
 		bookTrigger.bookFound = true;
+		Progress.IncreasePercentage (25f);
 		Destroy (gameObject);
 	}
 }
