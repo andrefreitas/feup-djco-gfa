@@ -1,25 +1,22 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class ElevatorKey : MonoBehaviour {
-	
+public class piso1Key : MonoBehaviour {
+
 	public float angSpeed = 1f;
-	public GameObject elevatorDoor;
-	
 	// Use this for initialization
 	void Start () {
-		
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		gameObject.transform.Rotate (Vector3.up);
 	}
-	
+
 	void OnTriggerEnter(Collider col) {
-		Debug.Log ("COLLIDED");
+		Debug.Log ("Found the key!");
+		bookTrigger.bookFound = true;
 		Destroy (gameObject);
-		Destroy (elevatorDoor);
-		StairsDoorTrigger.SetKeyState (true);
 	}
 }
