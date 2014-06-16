@@ -7,6 +7,7 @@ public class Progress : MonoBehaviour {
 	public Vector2 size = new Vector2(60,20);
 	public Texture2D emptyTex;
 	public Texture2D fullTex;
+	private static float percentageCompleted = 0;
 	
 	void OnGUI() {
 		//draw the background:
@@ -24,7 +25,13 @@ public class Progress : MonoBehaviour {
 		//for this example, the bar display is linked to the current time,
 		//however you would set this value based on your desired display
 		//eg, the loading progress, the player's health, or whatever.
-		barDisplay = Time.time*0.05f;
+		barDisplay = percentageCompleted * 0.01f;
 		// barDisplay = MyControlScript.staticHealth;
 	}
+
+	// percentage 0-100
+	public static void UpdatePercentage(float percentage) {
+		percentageCompleted = percentage;
+	}
+
 }

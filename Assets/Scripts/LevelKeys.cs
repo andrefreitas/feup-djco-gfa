@@ -5,7 +5,7 @@ public class LevelKeys : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		Progress.UpdatePercentage (0f);
 	}
 	
 	// Update is called once per frame

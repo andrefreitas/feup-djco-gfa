@@ -24,6 +24,7 @@ public class StairsDoorTrigger : MonoBehaviour {
 			rotatingDoor = true;
 			hasKey = false;
 			infoMessage.gameObject.guiText.enabled = false;
+			Progress.UpdatePercentage(100f);
 		}
 
 		if (nearDoor) {

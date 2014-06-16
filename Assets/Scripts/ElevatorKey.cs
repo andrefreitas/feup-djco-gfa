@@ -21,5 +21,6 @@ public class ElevatorKey : MonoBehaviour {
 		Destroy (gameObject);
 		Destroy (elevatorDoor);
 		StairsDoorTrigger.SetKeyState (true);
+		Progress.UpdatePercentage (75);
 	}
 }

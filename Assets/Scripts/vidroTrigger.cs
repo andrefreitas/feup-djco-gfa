@@ -16,5 +16,6 @@ public class vidroTrigger : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		vidro = GameObject.Find("vidro");
 		vidro.rigidbody.AddForce (Vector3.forward * 1000);
+		Progress.UpdatePercentage (35f);
 	}
 }
