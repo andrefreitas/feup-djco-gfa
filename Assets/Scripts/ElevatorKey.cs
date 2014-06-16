@@ -20,5 +20,6 @@ public class ElevatorKey : MonoBehaviour {
 		Debug.Log ("COLLIDED");
 		Destroy (gameObject);
 		Destroy (elevatorDoor);
+		StairsDoorTrigger.SetKeyState (true);
 	}
 }
