@@ -15,6 +15,7 @@ public class fallCubeTrigger : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		fallCube = GameObject.Find("fallCube");
+		fallCube.renderer.enabled = true;
 		fallCube.rigidbody.isKinematic = false;
 		fallCube.rigidbody.useGravity = true;
 	}
