@@ -12,6 +12,7 @@ public class bookTrigger : MonoBehaviour {
 	public GameObject goalAudio;
 	// Use this for initialization
 	void Start () {
+		gameScript.updateMessage("Encontra o livro que viste na pista que demos...");
 		GameObject.Find ("particlesBook").particleSystem.emissionRate = 0;
 		bookFound = false;
 		goalAudio = GameObject.Find ("goalAudio");
@@ -21,18 +22,17 @@ public class bookTrigger : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		bookText = GameObject.Find ("bookText");
 		if (!bookFound) {
-			bookText.guiText.enabled = true;
+			gameScript.updateMessage("Agora que encontraste o livro, tens que encontrar a chave para o abrir!");
 			if(percBookFound) {
 				Progress.IncreasePercentage(40f);
 				percBookFound = false;
 			}
 		} else {
 			goalAudio.audio.Play();
-			bookText.guiText.enabled = true;
 			bookFisica = GameObject.Find ("bookFisica");
 			Destroy(bookFisica);
 			GameObject.Find ("particlesBook").particleSystem.emissionRate = 10;
-			bookText.guiText.text = "Encontraste!";
+			gameScript.updateMessage("Conseguiste abrir o livro!");
 			Progress.UpdatePercentage(100f);
 			Destroy (gameObject);
 		}

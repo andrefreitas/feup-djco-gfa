@@ -19,7 +19,7 @@ public class ElevatorKey : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider col) {
 		keyAudio.audio.Play ();
-		Debug.Log ("COLLIDED");
+		gameScript.message = "Agora que tens a chave, descobre o livro que tens que encontrar!";
 		Destroy (gameObject);
 		Destroy (elevatorDoor);
 		StairsDoorTrigger.SetKeyState (true);

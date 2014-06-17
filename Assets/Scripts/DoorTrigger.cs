@@ -5,7 +5,7 @@ public class DoorTrigger : MonoBehaviour {
 
 	public GameObject door;
 	public GameObject doorSwitch;
-	public long maxCycles = 600;
+	public long maxCycles = 900;
 	public long cycles = 0;
 	private bool pressed = false;
 	public float angularVel = 0.5f;
@@ -45,6 +45,7 @@ public class DoorTrigger : MonoBehaviour {
 
 	void SetSwitchOn() {
 		if (!pressed) {
+			gameScript.updateMessage ("Conseguiste abrir as portas rolantes. Entra rápido!");
 			stoneAudio = GameObject.Find ("stoneAudio");
 			stoneAudio.audio.PlayOneShot(draggingStone);
 			for (int i = 0; i < 100; i++) {

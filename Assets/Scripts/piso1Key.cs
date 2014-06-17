@@ -19,6 +19,7 @@ public class piso1Key : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) {
 		keyAudio.audio.Play ();
+		gameScript.message = "Abre agora o livro!";
 		Debug.Log ("Found the key!");
 		bookTrigger.bookFound = true;
 		Progress.IncreasePercentage (25f);

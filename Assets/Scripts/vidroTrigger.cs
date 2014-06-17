@@ -19,5 +19,7 @@ public class vidroTrigger : MonoBehaviour {
 		windowAudio.audio.Play ();
 		vidro.rigidbody.AddForce (Vector3.forward * 1000);
 		Progress.UpdatePercentage (35f);
+		gameScript.updateMessage ("Encontra a chave da porta do Piso 1...");
+		Destroy (this);
 	}
 }
