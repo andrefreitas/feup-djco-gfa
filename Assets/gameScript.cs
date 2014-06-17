@@ -23,6 +23,7 @@ public class gameScript : MonoBehaviour {
 	}
 
 	public static void updateMessage(string msg){
+		gameScript.GameSound = GameObject.Find ("GameSound");
 		gameScript.GameSound.audio.Play ();
 		gameScript.message = msg;
 	}

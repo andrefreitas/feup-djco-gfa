@@ -18,8 +18,8 @@ public class LivesScript : MonoBehaviour {
 	}
 
 	private static void UpdateTextInfo() {
-		textLives.gameObject.guiText.text = "Lives: " + lives;
-		Debug.Log ("Lives: " + lives);
+		textLives.gameObject.guiText.text = "Vidas: " + lives;
+		Debug.Log ("Vidas: " + lives);
 	}
 
 	public static void IncreaseLives() {

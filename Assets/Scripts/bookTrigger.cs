@@ -28,7 +28,6 @@ public class bookTrigger : MonoBehaviour {
 				percBookFound = false;
 			}
 		} else {
-			goalAudio.audio.Play();
 			bookFisica = GameObject.Find ("bookFisica");
 			Destroy(bookFisica);
 			GameObject.Find ("particlesBook").particleSystem.emissionRate = 10;
