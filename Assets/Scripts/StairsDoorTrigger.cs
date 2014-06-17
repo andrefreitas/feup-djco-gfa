@@ -11,9 +11,11 @@ public class StairsDoorTrigger : MonoBehaviour {
 	private long limitTime = 300;
 	private bool rotatingDoor = false;
 	private long cyclesDoor = 0;
+	public GameObject doorAudio;
 
 	// Use this for initialization
 	void Start () {
+		doorAudio = GameObject.Find ("doorAudio");
 	
 	}
 	
@@ -21,6 +23,7 @@ public class StairsDoorTrigger : MonoBehaviour {
 	void Update () {
 		if (Input.GetKey ("k") && hasKey && nearDoor) {
 			//Destroy (stairsDoor);
+			doorAudio.audio.Play();
 			rotatingDoor = true;
 			hasKey = false;
 			infoMessage.gameObject.guiText.enabled = false;

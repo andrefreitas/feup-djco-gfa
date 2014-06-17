@@ -11,9 +11,11 @@ public class DoorTrigger : MonoBehaviour {
 	public float angularVel = 0.5f;
 	public float incYButton = 0.001f;
 	public GameObject stoneAudio;
+	public GameObject doorsAudio;
 	public AudioClip draggingStone;
 	// Use this for initialization
 	void Start () {
+		doorsAudio = GameObject.Find ("doorsAudio");
 	
 	}
 	
@@ -23,12 +25,13 @@ public class DoorTrigger : MonoBehaviour {
 		if (pressed) {
 
 			door.transform.Rotate(Vector3.up * (-angularVel));
-
+			doorsAudio.audio.mute = false;
 			if(cycles < maxCycles) {
 				cycles++;
 			}
 
 			else {
+				doorsAudio.audio.mute = true;
 				SetSwitchOff();
 			}
 		}

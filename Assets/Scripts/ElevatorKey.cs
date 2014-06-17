@@ -5,10 +5,11 @@ public class ElevatorKey : MonoBehaviour {
 	
 	public float angSpeed = 1f;
 	public GameObject elevatorDoor;
+	public GameObject keyAudio;
 	
 	// Use this for initialization
 	void Start () {
-		
+		keyAudio = GameObject.Find ("keyAudio");
 	}
 	
 	// Update is called once per frame
@@ -17,6 +18,7 @@ public class ElevatorKey : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider col) {
+		keyAudio.audio.Play ();
 		Debug.Log ("COLLIDED");
 		Destroy (gameObject);
 		Destroy (elevatorDoor);
