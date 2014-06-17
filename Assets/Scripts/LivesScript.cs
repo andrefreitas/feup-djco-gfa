@@ -41,4 +41,8 @@ public class LivesScript : MonoBehaviour {
 	public static int GetLives() {
 		return lives;
 	}
+	public static void SetLives(int n_lives) {
+		lives = n_lives;
+	}
+
 }

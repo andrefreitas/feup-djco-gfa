@@ -17,6 +17,6 @@ public class FallScript : MonoBehaviour {
 		if(LivesScript.DecreaseLives())
 			Application.LoadLevel (Application.loadedLevel);
 		
-		else Application.Quit (); // substituir por intro
+		else Application.LoadLevel ("intro");
 	}
 }
