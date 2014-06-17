@@ -9,16 +9,16 @@ public class bookTrigger : MonoBehaviour {
 	public GameObject bookText;
 	public GameObject bookFisica;
 	public bool percBookFound = true;
-
+	public GameObject goalAudio;
 	// Use this for initialization
 	void Start () {
 		GameObject.Find ("particlesBook").particleSystem.emissionRate = 0;
 		bookFound = false;
+		goalAudio = GameObject.Find ("goalAudio");
 		
 	}
 
 	void OnTriggerEnter(Collider col) {
-		Debug.Log ("Book found: " + bookTrigger.bookFound);
 		bookText = GameObject.Find ("bookText");
 		if (!bookFound) {
 			bookText.guiText.enabled = true;
@@ -27,6 +27,7 @@ public class bookTrigger : MonoBehaviour {
 				percBookFound = false;
 			}
 		} else {
+			goalAudio.audio.Play();
 			bookText.guiText.enabled = true;
 			bookFisica = GameObject.Find ("bookFisica");
 			Destroy(bookFisica);
