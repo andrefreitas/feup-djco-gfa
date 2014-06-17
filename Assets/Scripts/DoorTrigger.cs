@@ -10,7 +10,8 @@ public class DoorTrigger : MonoBehaviour {
 	private bool pressed = false;
 	public float angularVel = 0.5f;
 	public float incYButton = 0.001f;
-
+	public GameObject stoneAudio;
+	public AudioClip draggingStone;
 	// Use this for initialization
 	void Start () {
 	
@@ -41,6 +42,8 @@ public class DoorTrigger : MonoBehaviour {
 
 	void SetSwitchOn() {
 		if (!pressed) {
+			stoneAudio = GameObject.Find ("stoneAudio");
+			stoneAudio.audio.PlayOneShot(draggingStone);
 			for (int i = 0; i < 100; i++) {
 					doorSwitch.transform.Translate (Vector3.down * incYButton);
 			}
