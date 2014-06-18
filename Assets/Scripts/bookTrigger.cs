@@ -34,6 +34,15 @@ public class bookTrigger : MonoBehaviour {
 			gameScript.updateMessage("Conseguiste abrir o livro!");
 			Progress.UpdatePercentage(100f);
 			Destroy (gameObject);
+			//StartCoroutine(WaitEnd());
+			Application.LoadLevel ("intro");
+		}
+	}
+
+	IEnumerator WaitEnd() {
+		while (true) {
+			yield return new WaitForSeconds(2f);
+			break;
 		}
 	}
 
